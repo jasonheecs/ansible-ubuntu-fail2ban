@@ -12,3 +12,10 @@ install:
 - pip install ansible-container[docker]
 script:
 - make test
+
+notifications:
+  email:
+    recipients:
+      - jasonheecs@gmail.com
+    on_success: never
+    on_failure: always
