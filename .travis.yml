@@ -12,6 +12,7 @@ install:
 script:
   # https://github.com/ansible/ansible-container/issues/802
 - mkdir -p ~/.docker/ && touch ~/.docker/config.json
+- echo '{}' > ~/.docker/config.json
 - make test
 cache:
   directories:
