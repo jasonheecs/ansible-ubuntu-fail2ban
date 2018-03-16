@@ -10,8 +10,12 @@ install:
 - pip install ansible
 - pip install ansible-container[docker]
 script:
+  # https://github.com/ansible/ansible-container/issues/802
+- mkdir -p ~/.docker/ && touch ~/.docker/config.json
 - make test
-
+cache:
+  directories:
+    - $HOME/.cache/pip
 notifications:
   email:
     recipients:
