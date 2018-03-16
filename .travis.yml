@@ -1,0 +1,14 @@
+language: python
+dist: trusty
+sudo: required
+
+services:
+- docker
+before_install:
+- sudo apt-add-repository 'deb http://archive.ubuntu.com/ubuntu trusty-backports universe'
+- sudo apt-get update -qq
+install:
+- pip install ansible
+- pip install ansible-container[docker]
+script:
+- make test

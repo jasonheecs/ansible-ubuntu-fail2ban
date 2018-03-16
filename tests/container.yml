@@ -1,0 +1,22 @@
+version: "2"
+settings:
+
+  conductor:
+    base: ubuntu:trusty
+  project_name: fail2ban-tests
+
+services:
+  trusty:
+    from: ubuntu:trusty
+    ports:
+      - "4000:4000"
+    roles:
+      - role: setup
+        gather_facts: no
+      - role: ansible-ubuntu-fail2ban
+        become: yes
+    entrypoint: ['/usr/bin/dumb-init', '--']
+    command: ['bash', '-c', 'while true; do sleep 1; done']
+    working_dir: /
+    user: root
+registries: {}
