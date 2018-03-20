@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 ansible-container build && ansible-container run
 
 # Run the role again, checking to make sure it's idempotent.
