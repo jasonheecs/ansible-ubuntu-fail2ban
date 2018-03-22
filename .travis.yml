@@ -4,7 +4,7 @@ sudo: required
 
 env:
   - VERSION=trusty
-  - VERSION-xenial
+  - VERSION=xenial
 
 before_install:
 - sudo apt-add-repository 'deb http://archive.ubuntu.com/ubuntu trusty-backports universe'
@@ -17,7 +17,7 @@ script:
   # https://github.com/ansible/ansible-container/issues/802
 - mkdir -p ~/.docker/ && touch ~/.docker/config.json
 - echo '{}' > ~/.docker/config.json
-- make tests-$VERSION
+- "make test-${VERSION}"
 cache:
   directories:
     - $HOME/.cache/pip
