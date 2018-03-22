@@ -7,3 +7,9 @@
     validate_certs: no
 - name: Update packages
   raw: apt-get update -y
+- name: Install sudo
+  package:
+    name: sudo
+    state: present
+- name: Install ssl
+  raw: apt-get install -y libssl-dev
