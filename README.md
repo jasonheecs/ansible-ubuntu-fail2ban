@@ -53,7 +53,7 @@ Example Playbook
 - hosts: all
   become: yes
   roles:
-    - { role: jasonheecs.fail2ban }
+    - { role: jasonheecs.ubuntu-fail2ban }
 ```   
 
 License
