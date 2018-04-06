@@ -27,3 +27,4 @@ notifications:
       - jasonheecs@gmail.com
     on_success: never
     on_failure: always
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
