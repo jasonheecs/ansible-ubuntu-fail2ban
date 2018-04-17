@@ -11,6 +11,12 @@ Requirements
 None.
 
 
+Installation
+------------
+
+`ansible-galaxy install jasonheecs.ubuntu-fail2ban`
+
+
 Role Variables
 --------------
 
