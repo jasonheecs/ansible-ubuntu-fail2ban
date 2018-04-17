@@ -6,6 +6,9 @@
     mode: 0775
     validate_certs: no
 
+- name: Update packages
+  raw: apt-get update -y
+
 - name: Install sudo
   package:
     name: sudo
