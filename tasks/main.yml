@@ -5,13 +5,11 @@
     creates: /var/log/auth.log
     warn: no
 
-- name: Update packages
-  raw: apt-get update -y
-
 - name: Ensure fail2ban is installed
   apt:
     name: fail2ban
     state: latest
+    update_cache: yes
   notify:
     - restart fail2ban
 
