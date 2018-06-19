@@ -2,7 +2,7 @@
 
 [DEFAULT]
 
-ignoreip = {{ fail2ban_ignoreip + ' ' + fail2ban_ip_whitelist | default('') | join(' ') }}
+ignoreip = {{ fail2ban_ignoreip + ' ' + fail2ban_ip_whitelist | default('') }}
 bantime  = {{ fail2ban_bantime }}
 maxretry = {{ fail2ban_maxretry }}
 
